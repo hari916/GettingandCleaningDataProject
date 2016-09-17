@@ -1,12 +1,18 @@
+###########################################################################################################
+# Getting and Cleaning Data Week 4 Assignment
+# run_analysis.R
+# Initial ver 1.0 
+# Date Sep-18-2016
+###########################################################################################################
 rm(list = ls(all = TRUE))
-library(plyr) # load plyr first, then dplyr 
-library(data.table) # a prockage that handles dataframe better
-library(dplyr) # for fancy data table manipulations and organizatio
+library(plyr) # required for dplyr package
+library(data.table) # a package that handles dataframe
+library(dplyr) # for data table manipulations
 
 
 temp <- tempfile() # initialize a vector to store file
 download.file("http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip",temp)
-unzip(temp) #provides the list of files 
+unzip(temp) #unzips the downloaded file
 
 
 # Directories and files
